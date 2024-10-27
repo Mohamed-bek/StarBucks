@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #001c0f;
+  --secondary-color: #09ab75;
+  --font-size-base: 1rem;
+}
+html {
+  background-color: var(--primary-color);
+}
+body {
+  overflow: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ShadoBotton {
+  box-shadow: #09ab75 0px 3px 10px;
+}
+
+.TextWhite {
+  color: transparent;
+  -webkit-text-stroke: 2px white;
+  text-stroke: 2px white;
+}
+
+.ShadoImage {
+  filter: drop-shadow(30px 30px 10px black);
+}
+.ShadoImageSlider {
+  filter: drop-shadow(6px 7px 30px black);
+}
+
+.HeadDonw {
+  animation: upDown 0.6s 0.15s ease-in-out forwards;
+}
+
+@keyframes upDown {
+  to {
+    transform: translateX(0);
+  }
+}
+.BouncIn {
+  animation: bouncIn 0.5s 0.1s ease-in-out forwards;
+}
+
+@keyframes bouncIn {
+  from {
+    opacity: 0;
+    transform: translateX(-5%) scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-5%) scale(1);
+  }
+}
+.BouncInOut {
+  animation: bouncInOut 4s 0.1s ease-in-out infinite alternate;
+}
+
+@keyframes bouncInOut {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.15;
+  }
+}
